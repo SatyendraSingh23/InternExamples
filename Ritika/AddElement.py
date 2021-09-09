@@ -23,14 +23,16 @@ class LinkedList :
 		while temp!=None :
 			print(temp.data)
 			temp=temp.next
-        def findMid(self) :
-                slow_ptr=self.head
-                fast_ptr=self.head
-                if self.head is not None :
-                        while(fast_ptr is not None and fast_ptr.next is not None)
-                                    slow_ptr=slow_ptr.next
-                                    fast_ptr=fast_ptr.next.next
-                         return slow_ptr.data
+
+       def reverseList(self,head) :
+               prev = None  
+               while  head :
+                   temp = head
+                   head =head.next
+                   temp.next= prev
+                   prev = temp
+                 return prev   
+
 lst=LinkedList()
 lst.add(10)
 lst.add(20)
@@ -38,4 +40,4 @@ lst.add(30)
 lst.add(40)
 lst.add(50)
 lst.printAll()
-print("Middle :",lst.findMid())
+print("Reverse Linked List  is =",lst.reverseList())
